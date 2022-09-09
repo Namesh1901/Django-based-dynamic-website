@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>dest</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    {% for desti in destlt %}
+            {% if desti.name == dest %}
+            <h2>{{desti.name}}</h2><br>
+                <div class="destination_image">
+                    <img src="{{desti.img.url}}" alt="">
+                </div><br>
+            <h3>{{desti.desc}}</h3>
+            <h3>{{desti.price}}</h3>
+            {% endif %}
+    {% endfor %}
+</body>
+</html>
